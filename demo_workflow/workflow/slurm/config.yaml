@@ -10,3 +10,4 @@ cluster:
     --account kima
 default-resources: [cpus=2, mem_mb=512, time_min=10]
 cluster-cancel: scancel
+cluster-status: ./status.py
