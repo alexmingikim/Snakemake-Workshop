@@ -22,7 +22,7 @@ rule fastqc:
         html = ["../results/fastqc/{sample}_1_fastqc.html", "../results/fastqc/{sample}_2_fastqc.html"],
         zip = ["../results/fastqc/{sample}_1_fastqc.zip", "../results/fastqc/{sample}_2_fastqc.zip"]
     params:
-        fastqc_params =  config['PARAMS']['FASTQC']
+        fastqc_params = config['PARAMS']['FASTQC']
     log: 
         "logs/fastqc/{sample}.log"
     conda: 
