@@ -2,6 +2,8 @@
 # Maintainer: Alex Kim
 # Email: alex.kim@agresearch.co.nz
 
+# define configuration file
+configfile: "../config/config.yaml"
 
 # global wildcard
 SAMPLES, = glob_wildcards("../../data/{sample}_1.fastq.gz")
@@ -19,25 +21,29 @@ rule fastqc:
     output:
         html = ["../results/fastqc/{sample}_1_fastqc.html", "../results/fastqc/{sample}_2_fastqc.html"],
         zip = ["../results/fastqc/{sample}_1_fastqc.zip", "../results/fastqc/{sample}_2_fastqc.zip"]
+    params:
+        fastqc_params =  config['PARAMS']['FASTQC']
     log: 
         "logs/fastqc/{sample}.log"
     conda: 
         "envs/fastqc.yaml"
     threads: 2
     shell:
-        "fastqc {input.R1} {input.R2} -o ../results/fastqc/ -t {threads} %> {log}"
+        "fastqc {input.R1} {input.R2} -o ../results/fastqc/ -t {threads} {params.fastqc_params} %> {log}"
 
 rule multiqc:
     input: 
         expand(["../results/fastqc/{sample}_1_fastqc.zip", "../results/fastqc/{sample}_2_fastqc.zip"], sample = SAMPLES)
     output:
         "../results/multiqc_report.html"
+    params:
+        multiqc_params = config['PARAMS']['MULTIQC']
     log:
         "logs/multiqc/multiqc.log"
     conda:
         "envs/multiqc.yaml"
     shell:
-        "multiqc {input} -o ../results/ &> {log}"
+        "multiqc {input} -o ../results/ {params.multiqc_params} &> {log}"
 
 rule trim_galore:
     input: 
