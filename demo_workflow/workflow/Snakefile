@@ -44,6 +44,8 @@ rule trim_galore:
         ["../../data/{sample}_1.fastq.gz", "../../data/{sample}_2.fastq.gz"]
     output:
         ["../results/trimmed/{sample}_1_val_1.fq.gz", "../results/trimmed/{sample}_2_val_2.fq.gz"]
+    params:
+        "--paired"
     log:
         "logs/trim_galore/{sample}.log"
     conda:
@@ -52,6 +54,6 @@ rule trim_galore:
     resources:
         cpus=8
     shell:
-        "trim_galore {input} -o ../results/trimmed/ --paired --cores {threads} &> {log}"
+        "trim_galore {input} -o ../results/trimmed/ {params} --cores {threads} &> {log}"
 
 
