@@ -1,0 +1,15 @@
+
+  /// MultiQC 🔍 | v1.13 (fc50fa8)
+
+|           multiqc | Search path : /home/kima/snakemake_workshop/demo_workflow/results/fastqc/NA24694_1_fastqc.zip
+|           multiqc | Search path : /home/kima/snakemake_workshop/demo_workflow/results/fastqc/NA24695_1_fastqc.zip
+|           multiqc | Search path : /home/kima/snakemake_workshop/demo_workflow/results/fastqc/NA24631_1_fastqc.zip
+|           multiqc | Search path : /home/kima/snakemake_workshop/demo_workflow/results/fastqc/NA24694_2_fastqc.zip
+|           multiqc | Search path : /home/kima/snakemake_workshop/demo_workflow/results/fastqc/NA24695_2_fastqc.zip
+|           multiqc | Search path : /home/kima/snakemake_workshop/demo_workflow/results/fastqc/NA24631_2_fastqc.zip
+|         searching | ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 100% 6/6  
+|            fastqc | Found 6 reports
+|           multiqc | Compressing plot data
+|           multiqc | Report      : ../results/multiqc_report.html
+|           multiqc | Data        : ../results/multiqc_data
+|           multiqc | MultiQC complete

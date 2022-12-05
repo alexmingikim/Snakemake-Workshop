@@ -1,0 +1,3 @@
+TypeError in line 17 of /home/kima/snakemake_workshop/demo_workflow/workflow/Snakefile:
+Workflow.conda() missing 1 required positional argument: 'conda_env'
+  File "/home/kima/snakemake_workshop/demo_workflow/workflow/Snakefile", line 17, in <module>
