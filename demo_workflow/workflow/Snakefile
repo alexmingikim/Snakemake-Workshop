@@ -28,6 +28,8 @@ rule fastqc:
     conda: 
         "envs/fastqc.yaml"
     threads: 2
+    message:
+        "Undertaking quality control checks {input}"
     shell:
         "fastqc {input.R1} {input.R2} -o ../results/fastqc/ -t {threads} {params.fastqc_params} %> {log}"
 
@@ -42,6 +44,8 @@ rule multiqc:
         "logs/multiqc/multiqc.log"
     conda:
         "envs/multiqc.yaml"
+    message:
+        "Compiling a HTML report for quality control checks. Writing to {output}."
     shell:
         "multiqc {input} -o ../results/ {params.multiqc_params} &> {log}"
 
@@ -59,6 +63,8 @@ rule trim_galore:
     threads: 2
     resources:
         cpus=8
+    message: 
+        "Trimming using these paramter: {params}. Writing logs to {log}. Using {threads} threads."
     shell:
         "trim_galore {input} -o ../results/trimmed/ {params} --cores {threads} &> {log}"
 
