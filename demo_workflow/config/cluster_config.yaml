@@ -1,0 +1,7 @@
+# cluster_config.yml - cluster configuration
+__default__:
+    account: kima
+    partition: inv-iranui-fast,inv-iranui
+    time: 00:10:00 # time limit for each job
+    output: ./slurm/%j.log
+    memory: 512
