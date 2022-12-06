@@ -8,7 +8,7 @@ Parallel gzip (pigz) detected. Proceeding with multicore (de)compression using 2
 
 No quality encoding type selected. Assuming that the data provided uses Sanger encoded Phred scores (default)
 
-Output will be written into the directory: /home/kima/snakemake_workshop/demo_workflow/results/trimmed/
+Output will be written into the directory: /home/kima/Snakemake-Workshop/demo_workflow/results/trimmed/
 
 
 AUTO-DETECTING ADAPTER TYPE
@@ -22,7 +22,7 @@ Nextera	16	CTGTCTCTTATA	23746	0.07
 smallRNA	0	TGGAATTCTCGG	23746	0.00
 Using Illumina adapter for trimming (count: 225). Second best hit was Nextera (count: 16)
 
-Writing report to '/home/kima/snakemake_workshop/demo_workflow/results/trimmed/NA24695_1.fastq.gz_trimming_report.txt'
+Writing report to '/home/kima/Snakemake-Workshop/demo_workflow/results/trimmed/NA24695_1.fastq.gz_trimming_report.txt'
 
 SUMMARISING RUN PARAMETERS
 ==========================
@@ -48,7 +48,7 @@ Writing final adapter and quality trimmed output to NA24695_1_trimmed.fq.gz
 This is cutadapt 4.1 with Python 3.10.8
 Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ../../data/NA24695_1.fastq.gz
 Processing single-end reads on 2 cores ...
-Finished in 0.41 s (17 µs/read; 3.46 M reads/minute).
+Finished in 0.77 s (32 µs/read; 1.86 M reads/minute).
 
 === Summary ===
 
@@ -158,7 +158,7 @@ RUN STATISTICS FOR INPUT FILE: ../../data/NA24695_1.fastq.gz
 23746 sequences processed in total
 The length threshold of paired-end sequences gets evaluated later on (in the validation step)
 
-Writing report to '/home/kima/snakemake_workshop/demo_workflow/results/trimmed/NA24695_2.fastq.gz_trimming_report.txt'
+Writing report to '/home/kima/Snakemake-Workshop/demo_workflow/results/trimmed/NA24695_2.fastq.gz_trimming_report.txt'
 
 SUMMARISING RUN PARAMETERS
 ==========================
@@ -184,7 +184,7 @@ Writing final adapter and quality trimmed output to NA24695_2_trimmed.fq.gz
 This is cutadapt 4.1 with Python 3.10.8
 Command line parameters: -j 2 -e 0.1 -q 20 -O 1 -a AGATCGGAAGAGC ../../data/NA24695_2.fastq.gz
 Processing single-end reads on 2 cores ...
-Finished in 0.43 s (18 µs/read; 3.33 M reads/minute).
+Finished in 0.76 s (32 µs/read; 1.87 M reads/minute).
 
 === Summary ===
 
